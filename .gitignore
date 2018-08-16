@@ -1,0 +1,13 @@
+# OS X
+.DS_Store*
+Icon?
+._*
+
+# NODE JS
+node_modules
+package-lock.json
+*.log
+*.gz
+
+# INTELLI J
+.idea
