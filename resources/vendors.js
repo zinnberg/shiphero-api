@@ -1,5 +1,15 @@
 module.exports = function vendors(instance){
   return {
+    addProductsToVendors(data){
+      return instance.post('/add-products-to-vendor', {
+        data,
+      });
+    },
+    createVendor(data){
+      return instance.post('/vendor-create', {
+        data,
+      });
+    },
     listVendors(){
       return instance.get('/list-vendors')
     },
@@ -8,15 +18,5 @@ module.exports = function vendors(instance){
         params,
       });
     },
-    createVendor(data){
-      return instance.post('/vendor-create', {
-        data,
-      });
-    },
-    addProductsToVendors(data){
-      return instance.post('/add-products-to-vendor', {
-        data,
-      });
-    }
   };
 };

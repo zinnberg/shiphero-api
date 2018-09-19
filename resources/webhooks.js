@@ -1,5 +1,8 @@
 module.exports = function webhooks(instance){
   return {
+    getWebhooks(){
+      return instance.get('/get-webhooks')
+    },
     registerWebhook(data){
       return instance.post('/register-webhook', {
         data,
@@ -9,9 +12,6 @@ module.exports = function webhooks(instance){
       return instance.post('/unregister-webhook', {
         data,
       });
-    },
-    getWebhooks(){
-      return instance.get('/get-webhooks')
     },
   };
 };

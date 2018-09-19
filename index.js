@@ -17,7 +17,7 @@ function ShipHeroApi(token){
   }
 
   this.request = axios.create({
-    baseUrl: 'https://api-gateway.shiphero.com/v1.2/general-api/',
+    baseURL: 'https://api-gateway.shiphero.com/v1.2/general-api/',
     headers: {
       'x-api-key': token,
     },

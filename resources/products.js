@@ -1,12 +1,7 @@
 modules.exports = function products(instance){
   return {
-    createProduct(data){
-      return instance.post('/product-creation', {
-        data,
-      });
-    },
-    updateInventory(data){
-      return instance.post('/update-inventory', {
+    clearKit(data){
+      return instance.post('/clear-kit', {
         data,
       });
     },
@@ -15,19 +10,24 @@ modules.exports = function products(instance){
         data,
       });
     },
-    removeKit(data){
-      return instance.post('/remove-kit', {
-        data,
-      });
-    },
-    clearKit(data){
-      return instance.post('/clear-kit', {
+    createProduct(data){
+      return instance.post('/product-creation', {
         data,
       });
     },
     getProduct(params){
       return instance.get('/get-product', {
         params,
+      });
+    },
+    removeKit(data){
+      return instance.post('/remove-kit', {
+        data,
+      });
+    },
+    updateInventory(data){
+      return instance.post('/update-inventory', {
+        data,
       });
     },
   };
