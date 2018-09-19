@@ -1,6 +1,6 @@
 # shiphero-api
 
-### Installation
+## Installation
 
 ```js
 npm install shiphero-api
@@ -8,7 +8,19 @@ npm install shiphero-api
 yarn add shiphero-api
 ```
 
-### API
+## API
+
+Constructor Function That Takes a Shiphero API Token
+
+### ` Shiphero(token)`
+
+#### Arguments
+
+- `token` - Required - Shiphero API Token
+
+
+
+## Resources and Methods
 
 * fulfillmentStatus
   * createFulfillmentStatus
