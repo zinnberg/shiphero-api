@@ -1,4 +1,4 @@
-modules.exports = function orders(instance){
+module.exports = function orders(instance){
   return {
     getOrders(params){
       return instance.get('/get-orders', {
@@ -11,19 +11,13 @@ modules.exports = function orders(instance){
       });
     },
     createOrder(data){
-      return instance.post('/order-creation', {
-        data,
-      });
+      return instance.post('/order-creation', data);
     },
     updateOrder(data){
-      return instance.post('/order-update', {
-        data,
-      });
+      return instance.post('/order-update', data);
     },
     createOrderHistory(data){
-      return instance.post('/order-history-creation', {
-        data,
-      });
+      return instance.post('/order-history-creation', data);
     },
   };
 };
